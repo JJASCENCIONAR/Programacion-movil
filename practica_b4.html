@@ -10,53 +10,194 @@
 </head>
 
 <body>
-    <div class="container-fluid px-5"></div>
+    <div class="container-fluid border-bottom">
+        <div class="row align-items-center py-2">
 
-    <nav class="navbar navbar-expand-lg bg-danger">
+            <!-- Columna izquierda -->
+            <div
+                class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-start align-items-center gap-3 mb-2 mb-lg-0">
+                <div class="d-flex align-items-center gap-1 border-end border-secondary pe-3">
+                    <img src="img/imagenb4_1.jpg" style="height:40px;" alt="portada">
+                    <span style="font-size: 15px;"><strong>Portada del día</strong></span>
+                </div>
+                <div class="d-flex align-items-center gap-1 border-end border-secondary pe-3">
+                    <img src="img/imagenb4_2.png" style="height:40px;" alt="radio">
+                    <span style="font-size: 15px;"><strong>Radio MARCA</strong></span>
+                </div>
+                <div class="d-flex align-items-center gap-1">
+                    <img src="img/imagenb4_3.png" style="height:40px;" alt="fantasy">
+                    <span style="font-size: 14px; line-height:1.2;"><strong>Laliga Fantasy MARCA</strong></span>
+                </div>
+            </div>
+
+            <!-- Columna central (logo MARCA) -->
+            <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center mb-2 mb-lg-0">
+                <img src="img/imagenb4_4.png" style="height:80px;" alt="logo MARCA">
+            </div>
+
+            <!-- Columna derecha -->
+            <div class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-end align-items-center gap-2">
+                <select id="lenguaje" name="lenguaje" class="form-select w-auto">
+                    <option value="es">Español</option>
+                    <option value="en">Inglés</option>
+                    <option value="fr">Francés</option>
+                    <option value="de">Alemán</option>
+                </select>
+                <button class="btn btn-danger btn-sm">Suscribirse</button>
+                <button class="btn btn-outline-danger btn-sm">Iniciar sesión</button>
+            </div>
+
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger sticky-top px-3">
         <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active px-5" aria-current="page" href="#">Fútbol</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-5" href="#">Baloncesto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-5" href="#">Motor</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-5" href="#">Polideportivo</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle px-5" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Más +
-                        </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <div class="d-flex align-items-center">
+                    <div class="dropdown me-2">
+                        <button class="btn  dropdown-toggle text-white" type="button" data-bs-toggle="dropdown">
+                            Fútbol
+                        </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">Item 1</a></li>
+                            <li><a class="dropdown-item" href="#">Item 2</a></li>
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled px-5" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-                <form class="d-flex px-5" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    </div>
+                    <div class="dropdown me-2">
+                        <button class="btn  dropdown-toggle text-white" type="button" data-bs-toggle="dropdown">
+                            Baloncesto
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Item 1</a></li>
+                            <li><a class="dropdown-item" href="#">Item 2</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown me-2">
+                        <button class="btn dropdown-toggle text-white" type="button" data-bs-toggle="dropdown">
+                            Motor
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Item 1</a></li>
+                            <li><a class="dropdown-item" href="#">Item 2</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown me-2">
+                        <button class="btn dropdown-toggle text-white" type="button" data-bs-toggle="dropdown">
+                            Polideportivo
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Item 1</a></li>
+                            <li><a class="dropdown-item" href="#">Item 2</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn me-2 text-white">Más+</button>
+                </div>
+                <form class="d-flex ms-auto">
+                    <div class="input-group">
+                        <input class="form-control border-end-0" type="search" placeholder="Buscar en marca.com"
+                            aria-label="Buscar">
+                        <span class="input-group-text bg-white border-start-0">
+                            <i class="bi bi-search"></i>
+                        </span>
+                    </div>
                 </form>
             </div>
         </div>
     </nav>
+    <div class="container-fluid">
+        <div class="d-flex align-items-center justify-content-between" style="height:60px;">
+            <img src="img/imagenb4_5.png" style="width:4%;" alt="imagen equipo 1">
+            <img src="img/imagenb4_6.png" style="width:4%;" alt="imagen equipo 2">
+            <img src="img/imagenb4_7.png" style="width:4%;" alt="imagen equipo 3">
+            <img src="img/imagenb4_8.png" style="width:4%;" alt="imagen equipo 4">
+            <img src="img/imagenb4_9.png" style="width:4%;" alt="imagen equipo 5">
+            <img src="img/imagenb4_10.png" style="width:4%;" alt="imagen equipo 6">
+            <img src="img/imagenb4_11.png" style="width:4%;" alt="imagen equipo 7">
+            <img src="img/imagenb4_12.png" style="width:4%;" alt="imagen equipo 8">
+            <img src="img/imagenb4_13.png" style="width:4%;" alt="imagen equipo 9">
+            <img src="img/imagenb4_14.png" style="width:4%;" alt="imagen equipo 10">
+            <img src="img/imagenb4_15.png" style="width:4%;" alt="imagen equipo 11">
+            <img src="img/imagenb4_16.png" style="width:4%;" alt="imagen equipo 12">
+            <img src="img/imagenb4_17.png" style="width:4%;" alt="imagen equipo 13">
+            <img src="img/imagenb4_18.png" style="width:4%;" alt="imagen equipo 14">
+            <img src="img/imagenb4_19.png" style="width:4%;" alt="imagen equipo 15">
+            <img src="img/imagenb4_20.png" style="width:4%;" alt="imagen equipo 16">
+            <img src="img/imagenb4_21.png" style="width:4%;" alt="imagen equipo 17">
+            <img src="img/imagenb4_22.png" style="width:4%;" alt="imagen equipo 18">
+            <img src="img/imagenb4_23.png" style="width:4%;" alt="imagen equipo 19">
+            <img src="img/imagenb4_24.png" style="width:4%;" alt="imagen equipo 20">
+            <img src="img/imagenb4_25.webp" style="width:14%;" alt="imagen marca apuestas">
+        </div>
+        <div class="row justify-content-center mt-4">
+            <img src="img/imagenb4_26.gif" style="width:800px; height:auto;" alt="imagen">
+        </div>
+
+        <div class="container-fluid">
+            <div class="row p-5">
+
+                <div class="col-12 d-flex flex-column flex-lg-row gap-2">
+
+                    <div class="d-flex justify-content-between align-items-center w-100 mb-2 mb-lg-0 me-lg-3">
+                        <h4 class="fw-bold mb-0">Agenda</h4>
+
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle text-secondary" type="button" data-bs-toggle="dropdown">
+                                Ver más directos
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column flex-lg-row gap-2 w-100">
+
+                        <!-- Primer par -->
+                        <div class="d-flex flex-wrap align-items-center gap-2">
+                            <span class="px-2 py-1 text-white d-flex align-items-center"
+                                style="background-color: red; height:55px;">
+                                En directo
+                            </span>
+
+                            <span class="px-2 py-1 d-flex align-items-center"
+                                style="background-color: gainsboro; height:55px; width:200px;">
+                                <div>
+                                    Todas las noticias<br><b>Última hora</b>
+                                </div>
+                            </span>
+                        </div>
+
+                        <!-- Segundo par -->
+                        <div class="d-flex flex-wrap align-items-center gap-2 mt-2 mt-lg-0">
+                            <span class="px-2 py-1 text-white d-flex align-items-center"
+                                style="background-color: red; height:55px;">
+                                Lo mejor del día
+                            </span>
+
+                            <span class="px-2 py-1 d-flex align-items-center"
+                                style="background-color: gainsboro; height:55px; width:200px;">
+                                <div>
+                                    Agenda<br><b>Jueves 23</b>
+                                </div>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 
     <!--------------------------------------------------------------------- Parte 2 --------------------------------------------------------------------------->
     <div class="container-fluid col-12 px-5">
-        <div class="row p-5">
+        <div class="row p-5 ">
             <div class="col-md-4 card border-0 ">
                 <img src="Imagenes_DiarioMarca/dele-alli-festejo.jpg" class="img-fluid"
                     style="height:300px; object-fit:cover; width:100%;" alt="...">
@@ -110,64 +251,66 @@
             </div>
 
             <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-6 mb-4">
-            <div class="card border-0">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="Imagenes_DiarioMarca/reunion-de-la-afe.jpg" class="img-fluid" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h8 class="card-text text-primary">LALIGA SANTANDER</h8>
-                            <p class="card-text h4">¿Qué equipos y qué jugadores estuvieron en la reunión de la AFE?</p>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card border-0">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="Imagenes_DiarioMarca/reunion-de-la-afe.jpg" class="img-fluid" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h8 class="card-text text-primary">LALIGA SANTANDER</h8>
+                                        <p class="card-text h4">¿Qué equipos y qué jugadores estuvieron en la reunión de
+                                            la AFE?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center m-2">
+                                <span class="text-muted"></span>
+                                <span class="text-muted">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chat-left-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    </svg>
+                                    14
+                                </span>
+                            </div>
+                            <hr class="m-0">
                         </div>
                     </div>
-                </div>
-                <div class="d-flex justify-content-between align-items-center m-2">
-                    <span class="text-muted"></span>
-                    <span class="text-muted">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-chat-left-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
-                        </svg>
-                        14
-                    </span>
-                </div>
-                <hr class="m-0">
-            </div>
-        </div>
 
-        <div class="col-md-6 mb-4">
-            <div class="card border-0">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="Imagenes_DiarioMarca/draxler-y-martial.jpg" class="img-fluid" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h8 class="card-text text-primary">SEVILLA FC</h8>
-                            <p class="card-text h4">Draxler y Martial, nombres 'top' en la recta final del mercado</p>
+                    <div class="col-md-6 mb-4">
+                        <div class="card border-0">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="Imagenes_DiarioMarca/draxler-y-martial.jpg" class="img-fluid" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h8 class="card-text text-primary">SEVILLA FC</h8>
+                                        <p class="card-text h4">Draxler y Martial, nombres 'top' en la recta final del
+                                            mercado</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center m-2">
+                                <span class="text-muted">ROCIO GUEVARA SEVILLA</span>
+                                <span class="text-muted">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chat-left-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    </svg>
+                                    64
+                                </span>
+                            </div>
+                            <hr class="m-0">
                         </div>
                     </div>
                 </div>
-                <div class="d-flex justify-content-between align-items-center m-2">
-                    <span class="text-muted">ROCIO GUEVARA SEVILLA</span>
-                    <span class="text-muted">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-chat-left-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
-                        </svg>
-                        64
-                    </span>
-                </div>
-                <hr class="m-0">
             </div>
-        </div>
-    </div>
-</div>
 
 
             <div class="container p-5">
